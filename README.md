@@ -1,32 +1,28 @@
-# 🤖 TeleFeed Bot – Version Professionnelle
+# Téléfoot Bot - Render Deployment
 
-TeleFeed est un bot Telegram professionnel qui permet :
+## Déploiement rapide
 
-- 🔐 Connexion sécurisée via numéro
-- 🔁 Redirection automatique de messages entre chats
-- 💳 Paiement avec validation de licence
-- 🔑 Gestion d’abonnement (1 semaine / 1 mois)
-- 📁 Hébergement facile sur Render ou Replit
+1. **Créer un Web Service sur Render.com**
+2. **Connecter ce repository**
+3. **Configurer les variables d'environnement** :
+   - API_ID=29177661
+   - API_HASH=a8639172fa8d35dbfd8ea46286d349ab
+   - BOT_TOKEN=7573497633:AAHk9K15yTCiJP-zruJrc9v8eK8I9XhjyH4
+   - ADMIN_ID=1190237801
 
-## ⚙️ Commandes principales
+4. **Paramètres du service** :
+   - Build Command: `pip install -r requirements_render.txt`
+   - Start Command: `python render_deploy.py`
 
-- /connect → Connecte ton compte Telegram avec code aa12345
-- /redirection → Configure une source et une destination pour rediriger les messages
-- /payer → Demande un abonnement
-- /valide → Valide ta licence
-- /start → Menu d’accueil
+5. **Déployer**
 
-## 📁 Fichiers importants
+## Fonctionnalités
 
-- bot_handlers.py : toutes les commandes
-- user_manager.py : gestion des utilisateurs et licences
-- telefeed_redirections.json : redirections enregistrées
-- users.json : base des utilisateurs
-- sessions/ : stockage des connexions actives
-- render_deploy.py : relance les redirections à chaque démarrage
+- Gestion de licences utilisateur
+- Système d'activation admin
+- Pronostics football
+- Interface utilisateur complète
 
-## 🚀 Déploiement Render
+## Support
 
-- Type : Background Worker
-- Procfile : `worker: python3 render_deploy.py`
-- Variables d’environnement : API_ID, API_HASH, BOT_TOKEN, ADMIN_ID
+Bot développé pour la gestion de licences Téléfoot avec hébergement cloud optimisé.
